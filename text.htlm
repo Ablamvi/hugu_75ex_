@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tékoé Adjoko Gisa Gloria</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fbe7eb;
+            transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            color: #e84393;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        .pink { background-color: #ff9ff3; color: white; }
+        .purple { background-color: #a29bfe; color: white; }
+        .gold { background-color: #feca57; color: white; }
+        .rose { background-color: #f8a5c2; color: white; }
+        .light { background-color: #ffffff; color: black; border: 1px solid #ddd; }
+
+        /* Animation d’apparition */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Tékoé Adjoko Gisa Gloria</h1>
+        <p>Bienvenue sur mon site élégant et moderne.</p>
+        <div class="btn-container">
+            <button class="btn pink" onclick="changeColor('#ff9ff3', 'white')">Rose</button>
+            <button class="btn purple" onclick="changeColor('#a29bfe', 'white')">Violet</button>
+            <button class="btn gold" onclick="changeColor('#feca57', 'white')">Doré</button>
+            <button class="btn rose" onclick="changeColor('#f8a5c2', 'white')">Rosé</button>
+            <button class="btn light" onclick="changeColor('#ffffff', 'black')">Clair</button>
+        </div>
+    </div>
+
+    <script>
+        function changeColor(bgColor, textColor) {
+            document.body.style.backgroundColor = bgColor;
+            document.body.style.color = textColor;
+        }
+    </script>
+</body>
+</html>
